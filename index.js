@@ -5,7 +5,7 @@ const path = require('path')
 const app = express()
 //https://discord.com/api/webhooks//
 const webhook = new Discord.WebhookClient("851984962760081419", "lUFWWdJu8PPxyyuIhpw2iBzyiHtOYFj-LJYLMxKgnQjUIHqBwGQ-Rkq6RW7TQrMug34N")
-
+require('dotenv').config();
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 
