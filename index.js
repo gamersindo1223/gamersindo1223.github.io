@@ -1,11 +1,14 @@
 const express = require('express')
 const Discord = require('discord.js')
 const path = require('path')
+require('dotenv').config();
 
 const app = express()
 //https://discord.com/api/webhooks//
-const webhook = new Discord.WebhookClient("851984962760081419", "lUFWWdJu8PPxyyuIhpw2iBzyiHtOYFj-LJYLMxKgnQjUIHqBwGQ-Rkq6RW7TQrMug34N")
-require('dotenv').config();
+const id = process.env["client"]
+const token = process.env["TOKEN"]
+const webhook = new Discord.WebhookClient(id , token)
+
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 
