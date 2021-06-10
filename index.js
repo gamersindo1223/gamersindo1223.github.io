@@ -19,7 +19,3 @@ app.post('/form', (req, res) => {
     webhook.send(mappedString.join("\n"))
     res.send("your info has been interviewed")
 })
-
-app.listen(3000, () => {
-    console.log(`App listening on http://localhost:3000`)
-}) 
