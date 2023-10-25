@@ -10,7 +10,7 @@ async function Checkversion() {
       dialog.show();
       setTimeout(async () => {
         setInterval(() => {
-          if (c > 20) window.onbeforeunload = null;
+          if (c > 5) window.onbeforeunload = null;
           location.reload();
         }, 100);
       }, 3000);
